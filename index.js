@@ -1,5 +1,6 @@
 const beerApi = 'http://localhost:3000/beers';
 
+const { json } = require('express');
 const fetch = require('node-fetch')
 
 // fetch(beerApi)
@@ -12,10 +13,10 @@ const fetch = require('node-fetch')
 
 
 async function getBeer() {
-    const response = await fetch(beerApi.data);
-    const beers = await response.json();
+    const response = await fetch(beerApi);
+    const beers = await response.json(beerApi.data);
 
-    return beers
+    console.log(beers[102])
 }
 
 getBeer()
