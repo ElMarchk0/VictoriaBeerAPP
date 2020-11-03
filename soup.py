@@ -8,7 +8,7 @@ r = requests.get('http://localhost:3000/beers')
 soup = BeautifulSoup(r.text, 'lxml')
 
 f = csv.writer(open(' beerCSV.csv ','w'))
-f.writerow(['Beer CSV'])
+f.writerow(['Title'])
 f.writerow([soup.title.text])
 
 y = json.dumps(soup.title.text)

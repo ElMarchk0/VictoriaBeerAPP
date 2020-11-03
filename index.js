@@ -2,19 +2,20 @@ const beerApi = 'http://localhost:3000/beers';
 
 const fetch = require('node-fetch')
 
-fetch(beerApi)
-    .then(response => response.json())
-    .then(data => {
-        let name = "name"
-        console.log(data);
-    });
+// fetch(beerApi)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data)
+//     })
+//     .catch(console.error)
 
 
 
 async function getBeer() {
-    const response = await fetch(beerApiTest);
+    const response = await fetch(beerApi.data);
     const beers = await response.json();
-    console.log("Name of beer: " + beers.name)
+
+    return beers
 }
 
 getBeer()
