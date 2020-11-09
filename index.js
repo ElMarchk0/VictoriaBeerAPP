@@ -1,6 +1,6 @@
 const beerApi = 'http://localhost:3000/beers';
 
-const { json } = require('express');
+const express = require('express');
 const fetch = require('node-fetch')
 
 // fetch(beerApi)
@@ -15,8 +15,19 @@ const fetch = require('node-fetch')
 async function getBeer() {
     const response = await fetch(beerApi);
     const beers = await response.json(beerApi.data);
-
-    console.log(beers[102])
+    //console.log(Object.values(beers))
 }
+
+function extractJSON(obj, indent) {
+    for (const i in obj) {
+        if (Array.isArray(obj[i]) || typeof obj[i] === 'object') {
+            console.log(indent + i + ' is array or object');
+            extractJSON(obj[i], indent + ' > ' + i + ' > ');
+        } else {
+            console.log(indent + i + ': ' + obj[i]);
+        }
+    }
+}
+
 
 getBeer()
