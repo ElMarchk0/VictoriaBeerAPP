@@ -1,27 +1,33 @@
 {
-  "name": "beerapi",
-  "version": "1.0.0",
-  "description": "Victoria BC craft beer api",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ElMarchk0/VictoriaBeerAPP.git"
-  },
-  "keywords": [
-    "Beer",
-    "api"
-  ],
-  "author": "Peter Charlesworth",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ElMarchk0/VictoriaBeerAPP/issues"
-  },
-  "homepage": "https://github.com/ElMarchk0/VictoriaBeerAPP#readme",
-  "dependencies": {
-    "axios": "^0.21.0"
-  }
+    "name": "beerapi",
+    "version": "1.0.0",
+    "description": "Victoria BC craft beer api",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ElMarchk0/VictoriaBeerAPP.git"
+    },
+    "keywords": [
+        "Beer",
+        "api"
+    ],
+    "author": "Peter Charlesworth",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ElMarchk0/VictoriaBeerAPP/issues"
+    },
+    "homepage": "https://github.com/ElMarchk0/VictoriaBeerAPP#readme",
+    "dependencies": {
+        "axios": "^0.21.0",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "fs": "0.0.1-security"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
 }
