@@ -2,6 +2,9 @@
 
 const express = require('express');
 
+const PORT = 3001;
+const HOST = '0.0.0.0';
+
 // App
 const app = express();
 
@@ -14,6 +17,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const routes = require('./routes/routes.js')(app, fs);
 
-const server = app.listen(3001, () => {
-    console.log('listening on port %s...', server.address().port);
-});
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);

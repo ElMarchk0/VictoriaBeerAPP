@@ -2,7 +2,7 @@ const beerRoutes = (app, fs) => {
     // variables
     const dataPath = './BeerData/beersV1.json';
 
-    // helper methods
+
     const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {
         fs.readFile(filePath, encoding, (err, data) => {
             if (err) {
@@ -25,7 +25,6 @@ const beerRoutes = (app, fs) => {
     };
 
 
-    // READ
     app.get('/beers', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
