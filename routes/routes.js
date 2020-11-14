@@ -1,4 +1,4 @@
-const beerRoutes = require('./BeerData/beersV1.json')
+const beerRoutes = require('./beers')
 
 const appRouter = (app, fs) => {
 

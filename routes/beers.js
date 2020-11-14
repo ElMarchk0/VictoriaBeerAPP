@@ -3,7 +3,7 @@ const beerRoutes = (app, fs) => {
     const dataPath = './BeerData/beersV1.json';
 
     // READ
-    app.get('/beersV1', (req, res) => {
+    app.get('/beers', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
